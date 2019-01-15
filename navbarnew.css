@@ -1,0 +1,102 @@
+body,html{
+    margin: 0;
+    height: 100%;
+}
+nav{
+    background-color: #888;
+    width: 100%;
+    height:60;
+}
+nav ul{
+    list-style: none;
+    margin:0;
+    padding: 0;
+    height:100%;
+}
+nav ul li{
+    display: inline-block;
+    margin:0;
+}
+nav ul li a{
+    text-decoration: none;
+    display: block;
+    width: 150px;
+    background-color: aqua;
+    padding:20px;
+    box-sizing: border-box;
+}
+nav ul li a:hover{
+    background-color: #0dd;
+}
+
+#active{
+background-color: teal;
+}
+
+#active:hover{
+    background-color: rgb(0,110,110);
+}
+
+.dropdown{
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+@media screen and (max-width: 800px)
+{
+    html{
+        font-family: "comic sans ms"; 
+        font-weight: 900;  
+    }
+    nav ul{
+        width: 100vw;
+    }
+    nav ul li{
+        display: block;
+        width: 100vw;
+        border: 1px solid rgb(2, 90, 90) ;
+    }
+    nav ul li a{
+        width: 100vw;
+        text-align: center;
+        color:purple;
+    }
+}
+
+/*Är skärmen mindre än 600px blir
+bakgrundsfärgen röd*/
+@media screen and (max-width: 600px){
+    body{
+        background-color: red;
+    }
+}
+/*Är den mindre än 900px blir den blå*/
+@media screen and (max-width: 900px){
+    body{
+        background-color: blue;
+    }
+}
+
+/*Om skärmen är mindre än 900px OCH
+större än 600px ELLER OM skärmen ör större
+än 1100px*/
+@media screen and (max-width: 900px) and 
+(min-width: 600px), (min-width: 1100px) {
+    div.example {
+      font-size: 50px;
+      padding: 50px;
+      border: 8px solid black;
+      background: yellow;
+    }
+  }
